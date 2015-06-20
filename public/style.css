@@ -1,0 +1,62 @@
+body {
+  background-image: url('/berlin/skyline.jpg');
+  background-repeat: no-repeat;
+  background-color: black;
+}
+
+.payment {
+  display: none;
+  overflow: auto;
+  padding: 5%;
+  background-color: white;
+  border-radius: 2em;
+  padding-bottom: 5em;
+}
+
+form .btn {
+  position: relative;
+  top: 50px;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Lobster';
+  font-size: 60px;
+  color: white;
+}
+
+.roulette {
+  min-height: 400px;
+  text-align: center;
+  position: relative;
+}
+
+.roulette img {
+  position: absolute;
+  left: 200%;
+  top: 50px;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  border: 5px solid #ddd;
+  box-shadow: 1px 1px 35px -4px rgba(0,0,0,0.32);
+  -webkit-transition: all 1s ease;
+}
+
+.roulette img.focussed {
+  left: 50%;
+  margin-left: -100px;
+}
+
+.roulette img.discarded {
+  left: -100%;
+}
+
+.roulette .buttons {
+  position: relative;
+  top: 300px;
+}
+
+.roulette #stop_btn {
+  display: none;
+}

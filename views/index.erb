@@ -1,0 +1,17 @@
+<%= erb :roulette, layout: false %>
+
+<div class="payment">
+  <form action='/pay' method='post'>
+    <div id="payment-form"></div>
+    <input type="submit" value="Buy!" class='btn btn-primary btn-lg pull-right'>
+  </form>
+</div>
+
+<script src="https://js.braintreegateway.com/v2/braintree.js"></script>
+<script>
+var clientToken = "<%= @client_token %>";
+
+braintree.setup(clientToken, "dropin", {
+  container: "payment-form"
+});
+</script>
