@@ -1,11 +1,11 @@
-<% city = :berlin; amount = 15 %>
+<% city = :venice; amount = 15 %>
 
-<h1>Berliner Roulette!</h1>
+<h1>Venice Roulette!</h1>
 
 <div class="roulette" data-amount='<%= amount %>'>
   <% images = Array.new(amount) {|i| "#{city}/#{city}#{i+1}.jpg" } %>
   <% images.shuffle.each_with_index do |image, index| %>
-      <img src="<%= image %>" alt="Berlin" class='<%= 'focussed' if index == 0 %>' />
+      <img src="<%= image %>" alt="<%= city %>" class='<%= 'focussed' if index == 0 %>' />
   <% end %>
 
   <div class="buttons">
@@ -15,7 +15,7 @@
 </div>
 
 <audio loop id='roullete_audio'>
-  <source src="roulette.mp3">
+  <source src="<%= city %>/roulette.mp3">
 </audio>
 
 <audio id='cheer_audio'>
